@@ -29,3 +29,9 @@ scrape_configs:
       - targets: 
         - "localhost:9090"
         - "10.250.1.1:9100"
+
+  - job_name: "elasticbeanstalk"
+    metrics_path: "/actuator/prometheus"
+    static_configs:
+      - targets: 
+        - "springrest-angelocho.eba-q9mn6ev2.eu-west-1.elasticbeanstalk.com:80"
